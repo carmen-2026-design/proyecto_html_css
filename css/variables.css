@@ -1,0 +1,13 @@
+:root{
+    --color-primary: #fabada;
+    --color-secondary:#fae90a;
+    --bg-primary:#adabaf;
+    --bg-secondary:#d6d6db;
+    
+    --margin-top:1rem;
+    --margin-botto:1rem;
+    --margin-left:0.5rem;
+    --margin-right:0.5rem;
+
+    --font-size:1rem;
+}

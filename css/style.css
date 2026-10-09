@@ -1,0 +1,176 @@
+/*--------------------------
+    Estilos generales   
+---------------------------*/
+@import url("variables.css");
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    /* before y after hacen referencia a cualquier elemento que se coloque antes o después, por ejemplo los iconos */
+    /* width es el del content + padding + border */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------
+    Estilos del header    
+---------------------------*/
+header{
+    display:flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 15vw;
+    padding: 0.5rem 0;
+    background-color: rgb(141, 141, 10);
+    border: 1px solid #000000; 
+}
+
+.header__icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.header__title  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+/*--------------------------
+    Estilos de main    
+---------------------------*/
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 0.8fr 0.8fr;
+    grid-template-areas: 
+    "program"
+    "product"
+    "concert";
+    background-color: rgb(187, 122, 24);
+}
+
+.program-list{
+    grid-area: program;
+    /* text-align: center; */
+    margin-left: 5vw; 
+
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start; 
+    /* gap: 1vh;               */
+}
+
+.program-list th,
+.program-list td {
+    padding: 8px 3px;
+} 
+
+.product-list{
+    grid-area: product;
+    font-size: 17px;
+}
+
+.img-concert{
+    grid-area: concert;
+    /* border: 1px solid   black;
+    background-color: rgb(55, 20, 159); */
+}
+
+
+/*--------------------------
+    Estilos de footer    
+---------------------------*/
+footer {
+    background-color: rgb(42, 168, 42)
+    
+}
+
+/*------------------------------------------------------------------
+    ESTILOS MEDIA PARA EL PORTÁTIL
+----------------------------------------------*/
+@media (min-width:768px){
+
+/*--------------------------
+    Estilos del header    
+---------------------------*/
+header{
+    height: 5vw;
+}
+
+header nav {
+    width: 30%;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.hidden{
+    display: block;
+}
+
+.header__navbar{
+    display: block;
+}
+
+.menu--mobile{
+    display: none;
+}
+
+/*--------------------------
+    Estilos de main    
+---------------------------*/
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "concert product program";
+    background-color: rgb(187, 122, 24);
+}
+
+.img-concert{
+    grid-area: concert;
+    /* background-color: rgb(55, 20, 159);  */
+}
+
+.product-list{
+    grid-area: product;
+    /* background-color: rgb(159, 78, 20);  */
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.program-list{
+    grid-area: program;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;            /* Espacio entre imagen y tabla */
+}
+
+.program-list th,
+.program-list td {
+    padding: 8px 3px;
+}
+
+
+
+}
+
