@@ -83,4 +83,6 @@ El footer consolida la información corporativa, apoyos y puntos de contacto del
 * **CSS3:** Diseños, colores, tipografías, media queries y maquetación flexible para catálogos y galerías.  
 * **Visual Studio Code:** Entorno de desarrollo integrado utilizado para la maquetación y escritura del código.
 
+# **Autor**
+* Carmen Asensio - https://github.com/carmen-2026-design/proyecto_html_css.git
 
