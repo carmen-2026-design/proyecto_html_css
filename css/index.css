@@ -1,22 +1,3 @@
-/*--------------------------
-    Estilos generales   
----------------------------*/
-@import url("variables.css");
-
-
-html{
-    /* width es el del content + padding + border */
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    /* before y after hacen referencia a cualquier elemento que se coloque antes o después, por ejemplo los iconos */
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
 
 /*--------------------------
     Estilos de main    
@@ -80,7 +61,6 @@ main {
     margin-right: var(--margin-left);
     margin-bottom: var(--margin-bottom);
     padding: 15px;
-    font-size: 17px;
     background-color: var(--bg-descripcion);
     border: 2px solid rgb(30, 100, 10);
     border-radius: 8px;

@@ -27,7 +27,7 @@
 }
 
 .login input {
-    font-size: 16px;
+    font-size:var(--font-size);
     display: block;
     box-sizing: border-box;
     width: 100%;   
