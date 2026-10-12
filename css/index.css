@@ -1,0 +1,158 @@
+/*--------------------------
+    Estilos generales   
+---------------------------*/
+@import url("variables.css");
+
+
+html{
+    /* width es el del content + padding + border */
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    /* before y after hacen referencia a cualquier elemento que se coloque antes o después, por ejemplo los iconos */
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/*--------------------------
+    Estilos de main    
+---------------------------*/
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1 0.8fr 0.8fr;
+    grid-template-areas: 
+    "program"
+    "product"
+    "concert";
+    background-color: var(--bg-main);
+    font-size: var(--font-size);
+}
+
+.program-list {
+    grid-area: program;
+    margin-right: var(--margin-right);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.program-list a {
+    align-self:center;
+    padding-bottom: var(--margin-bottom);
+    box-sizing: border-box;
+}
+
+.program-list h2 {
+    text-align: center;
+}
+
+.program-list table {
+    margin: 0 auto var(--margin-bottom);
+    box-sizing: border-box;
+    width: 90%;
+    background-color: var(--bg-table);
+    border: 5px solid var(--color-table-border);
+    border-collapse: collapse;
+    font-size: var(--font-size);
+}
+
+.program-list th,
+.program-list td {
+    padding: 8px 3px;
+    overflow-wrap: break-word;
+    border-right: 1px solid var(--color-table-border);
+}  
+
+.program-list th {
+    border-bottom: 1px solid var(--color-table-border)
+}
+
+.product-description {
+    grid-area: product;
+    margin-left: var(--margin-left);
+    margin-top: var(--margin-top);
+    margin-right: var(--margin-left);
+    margin-bottom: var(--margin-bottom);
+    padding: 15px;
+    font-size: 17px;
+    background-color: var(--bg-descripcion);
+    border: 2px solid rgb(30, 100, 10);
+    border-radius: 8px;
+    box-sizing: border-box;
+    min-width: 0;
+    overflow-wrap: break-word;
+    font-size: var(--font-size);
+}
+
+.product-description p {
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-bottom);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    font-size: var(--font-size);
+}
+
+.img-concert {
+    grid-area: concert;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    padding-top: var(--margin-top);
+    padding-bottom: var(--margin-bottom);
+    box-sizing: border-box;
+}
+
+.img-concert img {
+    max-width: 90%;
+    height: auto;
+}
+
+/*----------------------------------------------
+------------------------------------------------
+    ESTILOS MEDIA PARA EL PORTÁTIL
+----------------------------------------------
+----------------------------------------------*/
+@media (min-width:768px){
+    /*--------------------------
+        Estilos de main    
+    ---------------------------*/
+    main {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1.2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "concert product program";
+        background-color: var(--bg-main);
+    }
+
+    .img-concert{
+        grid-area: concert;
+    }
+
+    .product-description{
+        grid-area: product;
+        margin-left: var(--margin-left);
+        margin-top: var(--margin-top);
+        margin-right: var(--margin-right);
+        margin-bottom: var(--margin-bottom);
+        font-size: 17px;
+        min-height: 600px;
+    }
+
+    .program-list{
+        grid-area: program;
+        margin-top: var(--margin-top);
+        margin-left: var(--margin-left);
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: var(--margin-bottom);            /* Espacio entre imagen y tabla */
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Establece el ancho del dispositivo. Permite adaptar al ancho de pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music live concert</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <header>
+        
+        <!-- Botón que despliega el menú para el móvil. Simulo el botón del menú con un checkbox y un label hasta que no pueda usar javascript-->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-button">
+            ☰
+        </label>
+
+        <div class="header__title">
+            <h1>Concierto en vivo</h1>
+        </div>
+    
+        <!-- Menú -->
+        <nav class="header__navbar hidden">
+            <ul class="nav">
+                <li class="nav__link"><a  href="index.html">Inicio</a></li>
+                <li class="nav__link"><a href="shop.html">Merchandising</a></li>
+                <li class="nav__link"><a href="who.html">Quiénes somos</a></li>
+                <li class="nav__link nav__link--active"><a href="login.html">Acceder</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+
+    <main class="main-login">
+        <section class="login">
+            <h2>Iniciar sesión</h2>
+
+            <form action="" method="post">
+                <fieldset class="login--usuario">
+                    <label for="email">Correo Electrónico*:</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required>
+                    <br>
+                    <label for="pass">Contraseña*:</label>
+                    <br>
+                    <input type="password" id="pass" name="pass" placeholder="Contraseña" required>
+                </fieldset>
+
+                <span>
+                    <button type="submit">Iniciar sesión</button>
+                    <a href="register.html" class="btn-registrar">Registrar usuario</a>
+                </span>
+                
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <section class="footer-partners">
+                <p>Partners</p>
+                <img src="assets/img/partners.png"
+                    alt="Partners">
+            </section>
+
+            <section class="footer-contacts">
+                <p>Contactos</p>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:kn.asensio@gmail.com">Solicita información</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <a href="https://www.google.com/maps/place/BBK+Kuna/@43.2540136,-2.9255988,17z/data=!3m1!4b1!4m6!3m5!1s0xd4e4fccb074d631:0xefe588f771d63369!8m2!3d43.2540097!4d-2.9230185!16s%2Fg%2F11hd1vgy9z?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D">Ubicación</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+    </footer>
+</body>
+
+</html>

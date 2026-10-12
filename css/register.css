@@ -1,0 +1,67 @@
+/*--------------------------
+    Estilos de main    
+---------------------------*/
+.main-register {
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-size:var(--font-size); 
+}
+
+.register h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.register--usuario {
+    border: none;
+    margin-bottom: 16px;
+}
+
+.register input:not([type="radio"]) {
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;    
+}
+
+.register input[type="radio"] {
+    width: auto;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.register form > span {
+    display: flex;
+    gap: 10px;
+}
+
+.register button,
+.register .btn-login {
+    flex: 1;
+    text-align: center;
+    font-family: inherit;
+    font-size:var(--font-size); 
+    padding: 12px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+.register .btn-login {
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 2px;
+    font-size:var(--font-size); 
+}
+

@@ -1,0 +1,71 @@
+/*--------------------------
+    Estilos de main    
+---------------------------*/
+.main-who {
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.who {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.who h2 {
+    text-align: center;
+    margin-bottom: var(--margin-bottom);
+}
+
+.who img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto var(--margin-right);
+}
+
+.who h3 {
+    align-self: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    margin: var(--margin-left) 0 var(--margin-right);
+}
+
+.who p {
+    align-self: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 var(--margin-right);
+    line-height: 1.6;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+    ESTILOS MEDIA PARA EL PORTÁTIL
+----------------------------------------------
+----------------------------------------------*/
+@media (min-width:768px){
+    /*--------------------------
+        Estilos de main    
+    ---------------------------*/
+    .main-who {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: var(--font-size); 
+     }
+
+    .who img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        max-width: 600;
+        height: auto;
+        margin: 0 auto var(--margin-right);
+    }
+}

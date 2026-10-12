@@ -4,6 +4,7 @@
 @import url("variables.css");
 
 html{
+    /* width es el del content + padding + border */
     box-sizing: border-box;
 }
 
@@ -11,7 +12,6 @@ html{
 *::before,
 *::after {
     /* before y after hacen referencia a cualquier elemento que se coloque antes o después, por ejemplo los iconos */
-    /* width es el del content + padding + border */
     box-sizing: inherit;
     margin: 0;
     padding: 0;
@@ -22,155 +22,226 @@ html{
 ---------------------------*/
 header{
     display:flex;
-    justify-content: space-around;
-    width: 100vw;
-    height: 15vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 30vw;
     padding: 0.5rem 0;
-    background-color: rgb(141, 141, 10);
-    border: 1px solid #000000; 
-}
-
-.header__icon{
-    width: 2rem;
-    height: 2rem;
+    gap: 15px;
+    background-color: var(--bg-header);
+    border: none; 
 }
 
 .header__title  {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .hidden{
     display: none;
 }
 
-/*--------------------------
-    Estilos de main    
----------------------------*/
-main {
-    display: grid;
+.menu-toggle{
+    display: none;
+}
+
+.menu-button{
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+    position: absolute;
+    left: 15px;
+}
+
+.menu-toggle:checked ~ .header__navbar {
+    display: block;
+}
+
+.header__navbar{
+    display: none;
+    position:absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 0.8fr 0.8fr;
-    grid-template-areas: 
-    "program"
-    "product"
-    "concert";
-    background-color: rgb(187, 122, 24);
+    z-index: 100;
+    background-color: var(--bg-header);
+    font-size:20px;
 }
 
-.program-list{
-    grid-area: program;
-    /* text-align: center; */
-    margin-left: 5vw; 
-
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start; 
-    /* gap: 1vh;               */
+.header__navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.program-list th,
-.program-list td {
-    padding: 8px 3px;
+.header__navbar li{
+    padding: 0.5rem 0;
+    background-color: var(--bg-header);
+    border-bottom: none;
+}
+
+.header__navbar a {
+    display: block;
+    padding: 0.5rem;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header__navbar a:hover{
+    background-color: var(--color-menu-hover);
 } 
-
-.product-list{
-    grid-area: product;
-    font-size: 17px;
-}
-
-.img-concert{
-    grid-area: concert;
-    /* border: 1px solid   black;
-    background-color: rgb(55, 20, 159); */
-}
-
 
 /*--------------------------
     Estilos de footer    
 ---------------------------*/
 footer {
-    background-color: rgb(42, 168, 42)
-    
+    width: 100%;
+    background-color: var(--bg-footer);
 }
 
-/*------------------------------------------------------------------
+.footer-sections {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-partners {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--margin-left) var(--margin-top);
+}
+
+.footer-sections p {
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 var(--margin-left) 0;
+}
+
+.footer-partners img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.footer-contacts {
+    padding: var(--margin-left) var(--margin-top);
+}
+
+.footer-contacts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contacts li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: var(--margin-bottom);
+}
+
+.footer-contacts li i {
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-contacts li a {
+    text-decoration: none;
+}
+
+/*----------------------------------------------
+------------------------------------------------
     ESTILOS MEDIA PARA EL PORTÁTIL
+----------------------------------------------
 ----------------------------------------------*/
 @media (min-width:768px){
 
-/*--------------------------
+    /*--------------------------
     Estilos del header    
----------------------------*/
-header{
-    height: 5vw;
-}
+    ---------------------------*/
+    header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        width: 100%;
+        height: 140px;
+        padding: 0;
+        gap: 0;
+    }
 
-header nav {
-    width: 30%;
-}
+    .header__title {
+        width: 100%;
+    }
+    
+    header nav {
+        width: 100%;
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
 
-header ul{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
+    .menu-toggle,
+    .menu-button {
+        display: none;
+    }
 
-.hidden{
-    display: block;
-}
+    .header__navbar {
+        display: block;
+        position: static;
+        width: 100%;
+        background-color: transparent;
+    }
 
-.header__navbar{
-    display: block;
-}
+    .header__navbar li {
+        padding: 0;
+        border-bottom: none;
+        gap: 10px;
+        background-color: transparent;
+    }
 
-.menu--mobile{
-    display: none;
-}
+    .header__navbar a {
+        white-space: nowrap;
+    }
 
-/*--------------------------
-    Estilos de main    
----------------------------*/
-main {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "concert product program";
-    background-color: rgb(187, 122, 24);
-}
+    .hidden {
+        display: block;
+    }
 
-.img-concert{
-    grid-area: concert;
-    /* background-color: rgb(55, 20, 159);  */
-}
+    .nav__icon {
+        display: none;
+    }
+    
+    /*--------------------------
+        Estilos de footer    
+    ---------------------------*/
+    .footer-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "partners contacts";
+        align-items: start;
+        height: 300px;
+        font-size:var(--font-size-footer-text); 
+    }
 
-.product-list{
-    grid-area: product;
-    /* background-color: rgb(159, 78, 20);  */
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 17px;
-}
+    .footer-partners {
+        grid-area: partners;
+        font-size:var(--font-size-footer-header); 
+    }
 
-.program-list{
-    grid-area: program;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 10px;            /* Espacio entre imagen y tabla */
-}
-
-.program-list th,
-.program-list td {
-    padding: 8px 3px;
-}
-
-
-
+    .footer-contacts {
+        grid-area: contacts;
+        font-size:var(--font-size-footer-header); 
+    }
 }
 

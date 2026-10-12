@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Establece el ancho del dispositivo. Permite adaptar al ancho de pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music live concert</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <header>
+        
+        <!-- Botón que despliega el menú para el móvil. Simulo el botón del menú con un checkbox y un label hasta que no pueda usar javascript-->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-button">
+            ☰
+        </label>
+
+        <div class="header__title">
+           <h1>Concierto en vivo</h1>
+        </div>
+    
+        <!-- Menú -->
+        <nav class="header__navbar hidden">
+            <ul class="nav">
+                <li class="nav__link"><a  href="index.html">Inicio</a></li>
+                <li class="nav__link nav__link--active"><a href="shop.html">Merchandising</a></li>
+                <li class="nav__link"><a href="who.html">Quiénes somos</a></li>
+                <li class="nav__link"><a href="login.html">Acceder</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+
+    <main class="main-shop">
+        <section class="merchandising">
+            <h2>Merchandising</h2>
+
+            <div class="carrito">
+                <span>Artículos añadidos:</span>
+                <span class="carrito--contador">3</span>
+            </div>
+
+            <ul>
+                <li>
+                    <article>
+                        <img src="assets/img/sudadera.webp" alt="Sudadera unisex" width="300px" height="300px">
+                        <p>Sudadera unisex</p>
+                        <p>25.00€</p>
+                        <input type="number" name="quantity" id="quantity1" min="1" max="10" value="1" step="1">
+                        <button>Añadir</button>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/camiseta-h.webp" alt="Camiseta hombre" width="300px" height="300px">
+                        <p>Camiseta hombre</p>
+                        <p>20.00€</p>
+                        <input type="number" name="quantity" id="quantity2" min="1" max="10" value="1" step="1">
+                        <button>Añadir</button>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/camiseta-m.webp" alt="Camiseta mujer" width="300px" height="300px">
+                        <p>Camiseta mujer</p>
+                        <p>20.00€</p>
+                        <input type="number" name="quantity" id="quantity3" min="1" max="10" value="1" step="1">
+                        <button>Añadir</button>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/camiseta-n.jpeg" alt="Camiseta niño" width="300px" height="300px">
+                        <p>Camiseta niño/a</p>
+                        <p>15.00€</p>
+                        <input type="number" name="quantity" id="quantity4" min="1" max="10" value="1" step="1">
+                        <button>Añadir</button>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <img src="assets/img/gorro.jpeg" alt="Gorro" width="300px" height="300px">
+                        <p>Gorro</p>
+                        <p>8.00€</p>
+                        <input type="number" name="quantity" id="quantity5" min="1" max="10" value="1" step="1">
+                        <button>Añadir</button>
+                    </article>
+                </li>
+            </ul>         
+          </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <section class="footer-partners">
+                <p>Partners</p>
+                <img src="assets/img/partners.png"
+                    alt="Partners">
+            </section>
+
+            <section class="footer-contacts">
+                <p>Contactos</p>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:kn.asensio@gmail.com">Solicita información</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <a href="https://www.google.com/maps/place/BBK+Kuna/@43.2540136,-2.9255988,17z/data=!3m1!4b1!4m6!3m5!1s0xd4e4fccb074d631:0xefe588f771d63369!8m2!3d43.2540097!4d-2.9230185!16s%2Fg%2F11hd1vgy9z?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D">Ubicación</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+    </footer>
+</body>
+
+</html>

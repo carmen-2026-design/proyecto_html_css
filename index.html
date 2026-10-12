@@ -6,57 +6,39 @@
     <!-- Establece el ancho del dispositivo. Permite adaptar al ancho de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music live concert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header>
+        
+        <!-- Botón que despliega el menú para el móvil. Simulo el botón del menú con un checkbox y un label hasta que no pueda usar javascript-->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="menu-button">
+            ☰
+        </label>
+
         <div class="header__title">
-            <img class="header__icon" src="assets/img/music-live-concert.avif" alt="concierto en vivo">
             <h1>Concierto en vivo</h1>
         </div>
-
-        <!-- Menú para el portátil -->
+    
+        <!-- Menú -->
         <nav class="header__navbar hidden">
             <ul class="nav">
-                <li class="nav__link nav__link--active">
-                    <a  href="index.html">Inicio</a>
-                </li>
-                <li clase="nav__link"><a href="shop.html">Merchandaising</a></li>
-                <li clase="nav__link"><a href="who.html">Quiénes somos</a></li>
-                <li clase="nav__link"><a href="login.html">Acceder</a></li>
+                <li class="nav__link nav__link--active"><a  href="index.html">Inicio</a></li>
+                <li class="nav__link"><a href="shop.html">Merchandising</a></li>
+                <li class="nav__link"><a href="who.html">Quiénes somos</a></li>
+                <li class="nav__link"><a href="login.html">Acceder</a></li>
             </ul>
         </nav>
 
-        <!-- Menú para el móvil. Pendiente ver como hacerlo bien -->
-        <nav class="header__navbar--mobile menu--mobile">
-            <ul class="nav">
-                <li class="nav__link--mobile nav__link--mobile--active">
-                    <a  href="index.html">1</a>
-                </li>
-                <li clase="nav__link__mobile"><a href="shop.html">3</a></li>
-                <li clase="nav__link__mobile"><a href="who.html">3</a></li>
-                <li clase="nav__link__mobile"><a href="login.html">4</a></li>
-            </ul>
-        </nav>
+        
     </header>
 
-    <main>
-        <section class="img-concert">
-            <img src="assets/img/live-concert.jpg" alt="imagen live concert">
-        </section>
-
-        <section class="product-list">
-            <p class="product__description">
-            El esperado festival <strong>EcoSonidos</strong> reunirá a grandes referentes de la música actual el próximo mes en el <strong>Estadio Metropolitano BBK Kuna</strong>. Este vibrante concierto en vivo contará con las actuaciones consecutivas de la multipremiada cantante de pop Sofía Reyes, la enérgica banda de rock alternativo Los Planetas y el aclamado productor de música electrónica DJ Zedd. La producción del evento promete una experiencia audiovisual sin precedentes, equipada con pantallas LED de última generación, efectos de luces láser y una acústica perfectamente optimizada para hacer vibrar a miles de fanáticos en una noche que promete ser inolvidable.
-            <br><br>
-            El espectáculo está diseñado como un viaje musical continuo donde los artistas fusionarán sus estilos en colaboraciones sorpresa preparadas exclusivamente para esta fecha. Los asistentes no solo disfrutarán de los mayores éxitos de cada repertorio, sino también de zonas gastronómicas locales y espacios interactivos antes del inicio del show.
-            <br><br>
-            Las entradas ya se encuentran en su última fase de venta general a través de los canales oficiales del recinto. 
-            <br>
-            Se recomienda al público asistir con bastante anticipación para superar los controles de acceso y asegurar la mejor ubicación en la pista.
-        </section>
-
+    <main class="main-index">
         <section class="program-list">
             <a href="login.html"> <img src="assets/img/tickets.jpeg" alt="Acceder"> </a>
 
@@ -64,8 +46,7 @@
             <table>
                 <thead>
                     <colgroup>
-                        <col style="background-color: #f2f2f2">
-                        <col span="2" style="background-color: #e6e6e6">
+                        <col span="2">
                     </colgroup>
                     <tr>
                         <th>Horario</th>
@@ -104,29 +85,54 @@
                 </tbody>
             </table>
         </section>
+
+        
+        <section class="product-description">
+            <div class="div-product-description">
+                <p class="product__description">
+                    El esperado festival <strong>EcoSonidos</strong> reunirá a grandes referentes de la música actual el próximo mes en el <strong>Estadio Metropolitano BBK Kuna</strong>. Este vibrante concierto en vivo contará con las actuaciones consecutivas de la multipremiada cantante de pop Sofía Reyes, la enérgica banda de rock alternativo Los Planetas y el aclamado productor de música electrónica DJ Zedd. La producción del evento promete una experiencia audiovisual sin precedentes, equipada con pantallas LED de última generación, efectos de luces láser y una acústica perfectamente optimizada para hacer vibrar a miles de fanáticos en una noche que promete ser inolvidable.
+                </p>
+                <p>
+                    El espectáculo está diseñado como un viaje musical continuo donde los artistas fusionarán sus estilos en colaboraciones sorpresa preparadas exclusivamente para esta fecha. Los asistentes no solo disfrutarán de los mayores éxitos de cada repertorio, sino también de zonas gastronómicas locales y espacios interactivos antes del inicio del show.
+                </p>
+                <p>
+                    Las entradas ya se encuentran en su última fase de venta general a través de los canales oficiales del recinto. 
+                </p>
+                <p class="product__recomend">
+                    <i><strong>Se recomienda al público asistir con bastante anticipación para superar los controles de acceso y asegurar la mejor ubicación en la pista.</strong></i>
+                </p>
+            </div>
+        </section>
+        
+
+        <section class="img-concert">
+            <img src="assets/img/live-concert.jpg" alt="imagen live concert">
+        </section>
+       
     </main>
 
     <footer>
-        <section class="footer-partners">
-            <p>Promotores</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Patrocinadores_Seleccion_Colombia.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
-                alt="Promotores">
-        </section>
+        <div class="footer-sections">
+            <section class="footer-partners">
+                <p>Partners</p>
+                <img src="assets/img/partners.png"
+                    alt="Partners">
+            </section>
 
-        <section class="footer-contactos">
-            <p>Contactos</p>
-            <ul>
-                <li>
-                    <!-- <img src="https://cdn-icons-png.flaticon.com/128/6244/6244710.png" alt="Email de contacto"> -->
-                    <a href="mailto:kn.asensio@gmail.com">Solicita información</a>
-                </li>
-                <li>
-                    <!-- <img src="https://cdn-icons-png.flaticon.com/128/5616/5616461.png" alt="Ubicación"> -->
-                    <a href="https://www.google.com/maps/place/BBK+Kuna/@43.2540136,-2.9255988,17z/data=!3m1!4b1!4m6!3m5!1s0xd4e4fccb074d631:0xefe588f771d63369!8m2!3d43.2540097!4d-2.9230185!16s%2Fg%2F11hd1vgy9z?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D">Ubicación</a>
-                </li>
-            </ul>
-        </section>
-
+            <section class="footer-contacts">
+                <p>Contactos</p>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:kn.asensio@gmail.com">Solicita información</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <a href="https://www.google.com/maps/place/BBK+Kuna/@43.2540136,-2.9255988,17z/data=!3m1!4b1!4m6!3m5!1s0xd4e4fccb074d631:0xefe588f771d63369!8m2!3d43.2540097!4d-2.9230185!16s%2Fg%2F11hd1vgy9z?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D">Ubicación</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
         
     </footer>
     

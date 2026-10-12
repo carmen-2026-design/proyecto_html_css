@@ -1,0 +1,123 @@
+/*--------------------------
+    Estilos de main    
+---------------------------*/
+.main-shop {
+    background-color: var(--bg-main);
+}
+
+.merchandising h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.merchandising ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 20px;
+    list-style: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.merchandising li {
+    display: block;
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 100%;
+}
+
+.merchandising {
+    width: 100%;
+}
+
+.merchandising article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--color-article-border); 
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    background-color: white;
+}
+
+.merchandising article img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.merchandising article p {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+}
+
+.merchandising article input {
+    width: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+}
+
+.merchandising article button {
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+    background-color: white;
+    border: 2px solid var(--color-article-border);
+    border-radius: 5px;
+}
+
+.merchandising article button:active {
+    background-color: var(--color-selected);
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid var(--color-article-border);
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1.2rem;;
+}
+
+.carrito--contador {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bg-main);
+    font-weight: bold;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+    ESTILOS MEDIA PARA EL PORTÁTIL
+----------------------------------------------
+----------------------------------------------*/
+@media (min-width:768px){
+    /*--------------------------
+        Estilos de main    
+    ---------------------------*/
+    .main-shop {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    
+}
